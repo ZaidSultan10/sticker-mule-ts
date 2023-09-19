@@ -9,7 +9,6 @@
 
     &__left{
         display: flex;
-        // justify-content: space-around;
         align-items: center;
         border: 1px solid snow;
         width: 100%;
@@ -19,24 +18,40 @@
     &__center{
         flex: 2;
         width: 100%;
-        border: 1px solid seashell;
     }
 
     &__right{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-        flex: 1.5;
 
-        &__labels{
+        &__desktop{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            flex: 1.5;
+
+            &__labels{
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+    
+                h4{
+                    cursor: pointer;
+                    height: 42px;
+                    padding: 8px;
+    
+                    &:hover{
+                        background-color: #3c1e10;
+                    }
+                }
+            }
+        }
+
+        &__mobile{
             display: flex;
             justify-content: flex-end;
             align-items: center;
-
-            h4{
-                margin-right: 16px;
-            }
+            width: 100%;
+            flex: 1.5;
         }
     }
     

@@ -1,4 +1,6 @@
-export const leftHeaderItems = [
+import { LeftProps } from "./headerInterface"
+
+export const leftHeaderItems: LeftProps[] = [
     {
         title: 'Products',
         menuItems: [{
