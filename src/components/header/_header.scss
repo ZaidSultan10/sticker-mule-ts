@@ -9,21 +9,34 @@
 
     &__left{
         display: flex;
-        justify-content: space-around;
+        // justify-content: space-around;
         align-items: center;
         border: 1px solid snow;
         width: 100%;
+        flex: 2.5;
+    }
+
+    &__center{
+        flex: 2;
+        width: 100%;
+        border: 1px solid seashell;
     }
 
     &__right{
         display: flex;
         justify-content: space-around;
         align-items: center;
-        border: 1px solid snow;
         width: 100%;
+        flex: 1.5;
 
         &__labels{
             display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            h4{
+                margin-right: 16px;
+            }
         }
     }
     
