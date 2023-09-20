@@ -10,9 +10,40 @@
     &__left{
         display: flex;
         align-items: center;
-        border: 1px solid snow;
+        justify-content: space-between;
         width: 100%;
         flex: 2.5;
+
+        &__hasMegaMenu{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+            height: 42px;
+            padding: 8px;
+
+            &:hover{
+                background-color: #3c1e10;
+            }
+
+            h4{
+                margin-right: 4px;
+            }
+        }
+
+        &__hamburger{
+            display: flex;
+            align-items: center;
+            color: white;
+            margin-left: 12px;
+
+            &__icon{
+                height: 24px !important;
+                width: 24px !important;
+                cursor: pointer;
+            }
+        }
     }
 
     &__center{
@@ -21,6 +52,10 @@
     }
 
     &__right{
+
+        &__cartIcon{
+            cursor: pointer;
+        }
 
         &__desktop{
             display: flex;
@@ -52,6 +87,8 @@
             align-items: center;
             width: 100%;
             flex: 1.5;
+            margin-right: 12px;
+            cursor: pointer;
         }
     }
     
