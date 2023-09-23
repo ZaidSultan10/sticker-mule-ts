@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown, faBars } from '@fortawesome/free-solid-svg-icons'
 import { leftHeaderItems, rightHeaderItems } from './headerData'
 import { RightProps, LeftProps } from './headerInterface'
+import { Tooltip } from 'react-tooltip'
 
 const Header : React.FC = () => {
     const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth)
@@ -38,12 +39,13 @@ const Header : React.FC = () => {
             {
                 windowWidth > 1040 ? (leftHeaderItems && leftHeaderItems.length > 0 && leftHeaderItems.map((item: LeftProps) => (
                     <div className='header__left__hasMegaMenu' key={item.title}>
-                        <h4>{item.title}</h4>
+                        <h4 data-tooltip-id="my-tooltip" data-tooltip-content="Hello world!">{item.title}</h4>
                         {
                             item.menuItems && (
                                 <FontAwesomeIcon height={'7px'} width={'7px'} icon={faCaretDown} />
                             )
                         }
+                        <Tooltip id="my-tooltip" />
                     </div>
                 ))) : (
                     <div className='header__left__hamburger'>
