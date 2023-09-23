@@ -38,14 +38,14 @@ const Header : React.FC = () => {
             }
             {
                 windowWidth > 1040 ? (leftHeaderItems && leftHeaderItems.length > 0 && leftHeaderItems.map((item: LeftProps) => (
-                    <div className='header__left__hasMegaMenu' key={item.title}>
-                        <h4 data-tooltip-id="my-tooltip" data-tooltip-content="Hello world!">{item.title}</h4>
+                    <div data-tooltip-id="my-tooltip" className='header__left__hasMegaMenu' key={item.title}>
+                        <h4>{item.title}</h4>
                         {
                             item.menuItems && (
                                 <FontAwesomeIcon height={'7px'} width={'7px'} icon={faCaretDown} />
                             )
                         }
-                        <Tooltip id="my-tooltip" />
+                        <Tooltip className='header__left__hasMegaMenu__items' id="my-tooltip">Hello world!</Tooltip>
                     </div>
                 ))) : (
                     <div className='header__left__hamburger'>

@@ -23,6 +23,11 @@
             height: 42px;
             padding: 8px;
 
+            &__items{
+                background-color: #fff !important;
+                color: black !important;
+            }
+
             &:hover{
                 background-color: #3c1e10;
             }
