@@ -1,0 +1,12 @@
+.headerSubMenu{
+    &__item{
+        display: flex;
+        // justify-content: space-between;
+        padding: 8px;
+        align-items: center;
+
+        p{
+            margin-left: 8px;
+        }
+    }
+}

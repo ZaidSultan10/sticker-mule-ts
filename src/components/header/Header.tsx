@@ -3,8 +3,9 @@ import './_header.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown, faBars } from '@fortawesome/free-solid-svg-icons'
 import { leftHeaderItems, rightHeaderItems } from './headerData'
-import { RightProps, LeftProps } from './headerInterface'
+import { RightProps, LeftProps, MegaMenuProps } from './headerInterface'
 import { Tooltip } from 'react-tooltip'
+import HeaderSubMenu from './HeaderSubMenu'
 
 const Header : React.FC = () => {
     const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth)
@@ -38,14 +39,16 @@ const Header : React.FC = () => {
             }
             {
                 windowWidth > 1040 ? (leftHeaderItems && leftHeaderItems.length > 0 && leftHeaderItems.map((item: LeftProps) => (
-                    <div data-tooltip-id="my-tooltip" className='header__left__hasMegaMenu' key={item.title}>
+                    <div data-tooltip-id={item.menuItems ? "my-tooltip" : ''} data-tooltip-delay-hide = {1000} className='header__left__hasMegaMenu' key={item.title}>
                         <h4>{item.title}</h4>
                         {
                             item.menuItems && (
                                 <FontAwesomeIcon height={'7px'} width={'7px'} icon={faCaretDown} />
                             )
                         }
-                        <Tooltip className='header__left__hasMegaMenu__items' id="my-tooltip">Hello world!</Tooltip>
+                        {/* <Tooltip className='header__left__hasMegaMenu__items' id="my-tooltip">
+                            <HeaderSubMenu subMenuProps = {item.menuItems?.filter((item: MegaMenuProps) => !item.description)} />
+                        </Tooltip> */}
                     </div>
                 ))) : (
                     <div className='header__left__hamburger'>
@@ -53,6 +56,9 @@ const Header : React.FC = () => {
                     </div>
                 )
             }
+            <div className='megaMenu'>
+                
+            </div>
         </div>
         {
             windowWidth <= 1040 ? (

@@ -10,8 +10,14 @@ interface MegaMenuItems {
 
 interface LeftHeaderProps {
     title: string,
-    menuItems?: MegaMenuItems[] | undefined
+    menuItems?: MegaMenuItems[]
+}
+
+interface SubMenuProps {
+    subMenuProps?: MegaMenuItems[]
 }
 
 export type RightProps = RightHeaderProps
 export type LeftProps = LeftHeaderProps
+export type MenuProps = SubMenuProps
+export type MegaMenuProps = MegaMenuItems
