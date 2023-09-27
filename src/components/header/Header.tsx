@@ -56,9 +56,9 @@ const Header : React.FC = () => {
                     </div>
                 )
             }
-            <div className='megaMenu'>
-                
-            </div>
+            {/* <div className='megaMenu'>
+
+            </div> */}
         </div>
         {
             windowWidth <= 1040 ? (
