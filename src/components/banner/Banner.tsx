@@ -14,10 +14,10 @@ const Banner: React.FC = () => {
             <p>{` free online proofs. Free shipping.`}</p>
           </div>
           <div className='banner__container__left__buttons'>
-            <div className='banner__container__left__button__shop'>
+            <div className='banner__container__left__buttons__shop'>
               <button>{`Shop Now`}</button>
             </div>
-            <div className='banner__container__left__button__sample'>
+            <div className='banner__container__left__buttons__sample'>
               <button>{`Get Samples`}</button>
             </div>
           </div>

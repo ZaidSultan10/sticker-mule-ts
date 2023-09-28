@@ -4,12 +4,11 @@
     width: 100%;
 
     &__container{
-        width: 75%;
+        width: 1000px;
         margin: 0 auto;
         display: flex;
 
         &__left{
-            border: 1px solid white;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -17,7 +16,6 @@
             // align-items: center;
 
             &__heading{
-                border: 1px solid white;
                 width: 350px;
                 
                 h1{
@@ -27,7 +25,46 @@
             }
 
             &__desc{
-                margin-top: 8px;
+                margin-top: 12px;
+                color: #fff;
+                font-weight: 500;
+            }
+            
+            &__buttons{
+                display: flex;
+                text-align: center;
+                margin-top: 1rem;
+
+                &__shop{
+                    button{
+                        min-width: 180px;
+                        padding: 22px 30px;
+                        font-size: 1.2rem;
+                        border-radius: 5px;
+                        border: none;
+                        outline: none;
+                        cursor: pointer;
+                        font-weight: 600;
+                        background-color: #5ba4e6;
+                        color: white;
+                    }
+                }
+
+                &__sample{
+                    margin-left: 1rem;
+                    button{
+                        min-width: 180px;
+                        padding: 22px 30px;
+                        font-size: 1.2rem;
+                        border-radius: 5px;
+                        border: none;
+                        outline: none;
+                        cursor: pointer;
+                        font-weight: 600;
+                        background-image: -webkit-linear-gradient(top,#ffad00 0%,#ff8700 100%);;
+                        color: white;
+                    } 
+                }
             }
         }
 
